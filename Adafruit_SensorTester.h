@@ -17,7 +17,7 @@ class Adafruit_SensorTester : public Adafruit_Sensor {
   /* Constructor */
   Adafruit_SensorTester(int32_t);
 
-  void getEvent(sensors_event_t*);
+  bool getEvent(sensors_event_t*);
   void getSensor(sensor_t*);
   
  private:
