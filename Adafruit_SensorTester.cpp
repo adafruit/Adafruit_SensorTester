@@ -38,5 +38,5 @@ void Adafruit_SensorTester::getSensor(sensor_t *sensor) {
   sensor->resolution  = 0.01F;                // 0.01 hPa resolution
 
   /* Clear the reserved section */
-  memset(sensor->reserved, 0, sizeof(sensor->reserved));
+  // memset(sensor->reserved, 0, sizeof(sensor->reserved));
 }
