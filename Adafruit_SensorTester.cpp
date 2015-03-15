@@ -9,7 +9,7 @@ Adafruit_SensorTester::Adafruit_SensorTester(int32_t sensorID) {
   _sensorID = sensorID;
 }
 
-void Adafruit_SensorTester::getEvent(sensors_event_t *event) {
+bool Adafruit_SensorTester::getEvent(sensors_event_t *event) {
   /* Clear the event */
   memset(event, 0, sizeof(sensors_event_t));
 
@@ -18,6 +18,8 @@ void Adafruit_SensorTester::getEvent(sensors_event_t *event) {
   event->type      = SENSOR_TYPE_PRESSURE;
   event->timestamp = 0;
   event->pressure = 123.0F;
+  
+  return true;
 }
 
 void Adafruit_SensorTester::getSensor(sensor_t *sensor) {
